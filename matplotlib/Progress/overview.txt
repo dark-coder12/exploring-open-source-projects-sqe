@@ -1,1 +1,13 @@
+Matplotlib is one of Python's most widely used open source libraries. It was first created by John Hunter in 2002, to initally enable plotting like MATLAB.
 
+It is majorly oriented towards data visualization in Python and is a graphical plotting library that works efficiently across platforms. It functions as a component of NumPy, another Python library aimed at dealing with numerical resources. NumPy deals with arrays of numbers, which usually target real life data. Both work in unison to help developers model machine learning technologies, in an analytical sense.
+
+
+According to Matplotlib's official website: 
+
+"A Python matplotlib script is structured so that a few lines of code are all that is required in most instances to generate a visual data plot. The matplotlib scripting layer overlays two APIs:
+
+The pyplot API is a hierarchy of Python code objects topped by matplotlib.pyplot
+An OO (Object-Oriented) API collection of objects that can be assembled with greater flexibility than pyplot. This API provides direct access to Matplotlib’s backend layers."
+
+In short, this library helps user visualize their data according to their need, as well as add styles and utility functions. For instance, matplotlib allows creation of bar graphs, histograms, scatter plots through the 2D arrays supplied by NumPy and much more. We can further specify axis information, subplots, and so on.
