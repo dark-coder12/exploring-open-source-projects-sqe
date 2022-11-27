@@ -1,0 +1,9 @@
+                                                                Latest Verison of NodeJS
+                                                                
+The current and stable version of Nodejs is 18.12.1 which includes npm 8.19.2 as well.
+Where current version was released on: April 19, 2022 and LTS version was released on Octuber 25, 2022.
+Where as upcoming releases are Nodejs 19 and Nodejs 20. Nodejs 19 current version was released by October 18, 2022 while NodeJS 20 is expected to release by April 18, 2023.
+
+                                                                Versioning scheme introduced by NodeJS
+                                                                
+Major Node.js versions enter Current release status for six months, which gives library authors time to add support for them. After six months, odd-numbered releases (9, 11, etc.) become unsupported, and even-numbered releases (10, 12, etc.) move to Active LTS status and are ready for general use. LTS release status is "long-term support", which typically guarantees that critical bugs will be fixed for a total of 30 months. Production applications should only use Active LTS or Maintenance LTS releases.
