@@ -1,0 +1,11 @@
+The artist layer is the middle layer, and it uses the Renderer to put ink on the canvas.
+
+Everything in the Figure is an Artist Instance, the title, lines, tick labels, images and more.
+
+There are two types of Artist objects. The first type is the primitive type, such as a Line2D, Rectangle, Circle, and Text. And the second type is the composite type, such as the Axis, Tick, Axes and Figure.
+
+It is important to notice that each composite artist may contain other composite artists as well as primitive artists. For example a figure artist can contain an axis artist as well as a rectangle or text artist.
+
+The coupling between the Artist hierarchy and the backend happens in the draw method. 
+
+The Artist doesn't know what kind of backend the renderer is going to draw onto (PDF, SVG, GTK+ DrawingArea, etc.) but it does know the Renderer API and will call the appropriate method (draw_text or draw_path).
