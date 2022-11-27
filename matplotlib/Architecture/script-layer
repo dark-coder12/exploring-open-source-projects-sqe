@@ -1,0 +1,7 @@
+It is the top layer, designed to make Matplotlib work like a MATLAB script. It is a collection of command style functions and is therefore considered the easiest layer to use.
+
+Scripting layer automates the process of putting everything together. Thus, it is easier to use than the Artist layer.
+
+Scripting layer plotting is sometimes also called procedural plotting.
+
+Matplotlib’s scripting layer is essentially the matplotlib.pyplot interface, which automates the process of defining a canvas and defining a figure artist instance and connecting them.
