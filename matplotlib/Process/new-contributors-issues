@@ -1,0 +1,11 @@
+Specific Issue Labels:
+
+Matplotlib has effectively labelled issues to help contributors find their difficulty match.
+
+Some are specifically for new ones, referred as good first issues. These are well documented issues, that do not require a much understanding of the source code. These are further tagged with difficulty levels.Easy, Medium and Hard depending on Python complexity used.
+
+Issues can also be created for bug reporting, which should follow the guidelines:
+
+-> A short 1-2 sentence long summary of the bug.
+-> A short code snippet that helps the developer reproduce the code.
+-> The actual and expected outccome.
