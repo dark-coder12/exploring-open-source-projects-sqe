@@ -1,0 +1,2 @@
+15.0.0	7 April 2016	
+Initial render now uses document.createElement instead of generating HTML, No more extra <span>s, Improved SVG support, ReactPerf.getLastMeasurements() is opaque, New deprecations introduced with a warning, Fixed multiple small memory leaks, React DOM now supports the cite and profile HTML attributes and cssFloat, gridRow and gridColumn CSS properties.
