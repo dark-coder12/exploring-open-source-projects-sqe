@@ -1,0 +1,29 @@
+Matplotlib offers a separate page with efficient navigation to hold links to all previous versions and the changes made in them. The main page holds an index to all of the changes in a chronological order.
+
+https://matplotlib.org/stable/users/release_notes.html#past-versions
+
+Upon clicking 3.3.0's version, changes were made clear using clear documentation and code snippets.
+
+For instance:
+1) A new feature included an extra parameter "loc" for ticks / labels of figures for simplified positioning, a highly understandable figure and code was attached.
+The figure clearly shows the output when left, right or bottom are selected and how the plot changes.
+
+
+2) Allow tick formatters to be set with str or function inputs
+set_major_formatter and set_minor_formatter now accept str or function inputs in addition to Formatter instances.
+For a str a StrMethodFormatter is automatically generated and used. 
+For a function a FuncFormatter is automatically generated and used. 
+
+ax.xaxis.set_major_formatter('{x} km')
+ax.xaxis.set_minor_formatter(lambda x, pos: str(x-5))
+are shortcuts for:
+
+import matplotlib.ticker as mticker
+
+ax.xaxis.set_major_formatter(mticker.StrMethodFormatter('{x} km'))
+ax.xaxis.set_minor_formatter(
+    mticker.FuncFormatter(lambda x, pos: str(x-5))
+    
+It's clear from the example that {x} now replaces a long function mticker.StrMethodFormatter('{x}').
+
+Thus the documentation is supported by figures and code to show proof of added / edited functionality.
