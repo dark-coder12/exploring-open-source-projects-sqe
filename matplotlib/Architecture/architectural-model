@@ -1,0 +1,8 @@
+                                                                   Introduction
+ Matplotlib relies on its architecture to provide users with efficient data visualization techniques. It mainly includes three major layers within it's architecture:
+ 
+Backend Layer: Handles all the heavy works via communicating to the drawing toolkits in your machine. It is the most complex layer.
+
+Artist Layer: Allows full control and fine-tuning of the Matplotlibfigure — the top-level container for all plot elements.
+
+Scripting Layer: The lightest scripting interface among the three layers, designed to make Matplotlib work like MATLAB script.
