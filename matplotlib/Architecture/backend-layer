@@ -1,0 +1,7 @@
+The backend layer uses three built in interface classes.
+
+Figure Canvas: This is the canvas that will be rendered by the Figure.
+
+Renderer: This handles all drawing operations in the Figure Canvas.
+
+Event: This handles user inputs for instance, keyboard and mouse clicks.
