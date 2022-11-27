@@ -1,0 +1,86 @@
+Documentation Contribution can be done by understanding the structure of docs in Matplotlib. All documentation is continued from the doc/ directory found in the github repository. This contains config files for both Sphinx and ReST files (both are rendered to documentation pages)
+
+Documentation is done in 3 major ways.
+
+1) API Documentation
+This is done using docstrings of classes in the library.
+
+2) Sphinx Gallery
+This gallery generates contents of doc/plot_types, doc/gallery, and doc/tutorials from Python Files. Python scripts are aided with ReST documentation.
+
+3) ReST
+One can also add documentation in a .rst file within the doc/users folder.
+
+Doc Build Setup
+The documentation for Matplotlib is generated from ReST using Sphinx's documentation generation tool.
+
+Doc Build
+make html
+
+
+Some requirements by Matplotlib:
+
+-> Section formatting
+For everything but top-level chapters, use Upper lower for section titles, e.g., Possible hangups rather than Possible Hangups
+
+Follow the Python documentation and the Sphinx reStructuredText documentation for section markup characters, for example:
+
+# with overline, for parts.
+* with overline, for chapters.
+=, for sections
+-, for subsections
+^, for subsubsections
+", for paragraphs
+
+
+-> Function Args
+Function arguments and keywords within docstrings should be referred to using the *emphasis* role. 
+
+For example *argument*
+
+Do not describe `argument` like this.
+Do not describe ``argument`` like this.
+
+
+-> Referencing of documents
+
+Internal Documentation Referencing can be easily achieved using :doc: directive:
+
+For example: 
+
+See the :doc:`/users/installing/index`
+See the tutorial :doc:`/tutorials/introductory/quick_start`
+
+will load as:
+
+See the Installation
+See the tutorial Quick start guide
+
+-> To maximize internal consistency in section labeling and references, use hyphen separated, descriptive labels for section references.
+For example, what-is-a-backend
+
+
+-> Referencing Code
+To link to other methods, classes, or modules in Matplotlib back ticks can be used:
+
+`matplotlib.collections.LineCollection`
+generates a link like this: matplotlib.collections.LineCollection.
+
+
+-> Including figures and files
+Images are easily added using image:: directive. 
+
+For example: tutorials/intermediate/constrainedlayout_guide.py displays images.
+
+
+-> Writing docstrings
+Most of the API documentation is written in docstrings, which are like comments, or code blocks explaining the working before each code snippet.
+
+Example docstring
+
+def hlines(self, y, xmin, xmax, colors=None, linestyles='solid',
+           label='', **kwargs):
+    """
+    Plot horizontal lines at each *y* from *xmin* to *xmax*.
+    axhline : horizontal line across the Axes
+    """
