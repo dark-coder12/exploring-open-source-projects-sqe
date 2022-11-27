@@ -1,0 +1,29 @@
+Issues help in good project communication for making feature requests, reporting bugs, identifying major projects to work on, and discussing priorities. 
+
+Members with permissions of issues can achieve the following: 
+
+-> Update labels for issues and PRs.
+-> Reproduce the issue, if the posted code is a bug label the issue with "status: confirmed bug".
+-> Identify regressions, determine if the reported bug used to work as expected in a recent version of Matplotlib.
+-> Close usage questions and politely recommend Stack Overflow instead and label as "community support".
+-> Close duplicate issues, after confimring they are indeed duplicates.
+-> Close issues that cannot be replicated, after leaving time to add extra information.
+
+
+Questions / Suggestions while maintaining Issues: 
+
+-> Thank the reporter for opening an issue
+-> Is this a usage question? If so close it with a polite message.
+-> Is the necessary information provided?
+-> Is the issue minimal and reproducible?
+-> If a reproducible example is provided, but you see a simplification, add your simpler example.
+-> Is this a regression?
+-> Is this a duplicate issue?
+
+To Join The Team:
+
+Correctly triage 2-3 issues.
+Ask someone on the triage team (publicly or privately) to recommend you to the triage team.
+
+
+Incase of lack of permissions, @matplotlib/triageteam can be tagged to send in recommendations.
