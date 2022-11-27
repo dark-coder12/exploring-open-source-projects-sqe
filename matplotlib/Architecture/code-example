@@ -1,0 +1,47 @@
+Backend layer:
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+def on_press(event):
+    if event.inaxes is None: return
+    for line in event.inaxes.lines:
+        if event.key=='t':
+            visible = line.get_visible()
+            line.set_visible(not visible)
+    event.inaxes.figure.canvas.draw()
+
+fig, ax = plt.subplots(1)
+
+fig.canvas.mpl_connect('key_press_event', on_press)
+
+ax.plot(np.random.rand(2, 20))
+
+plt.show()
+
+
+Artist Layer:
+
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
+fig = Figure()
+canvas = FigureCanvas(fig)
+
+x = np.random.randn(10000)
+
+ax = fig.add_subplot(111)
+
+ax.hist(x, 100)
+fig.savefig('matplotlib_histogram.png')
+
+
+Scripting Layer:
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.randn(10000)
+plt.hist(x, 100)
+plt.title(r'Normal distribution with $\mu=0, \sigma=1$')
+plt.savefig('matplotlib_histogram.png')
+plt.show()
