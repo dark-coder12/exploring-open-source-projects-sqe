@@ -1,0 +1,30 @@
+Reusibility and modularity are two such attributes that complement each other. If a code is modular i.e. divided well into short features that focus on one task only, that means that the code in consideration is not coupled and can be used in other features too without the need to reinvent the wheel i.e reusable as well.
+
+Matplotlib's code also shows high modularity with low coupling, a great example of quality attributes.
+
+Matplotlib's library folder holds short modules for each component, without the interference of any other module, thus paving the way for the code to be easily reused elsewhere.
+
+Lib:  https://github.com/matplotlib/matplotlib/tree/main/lib/matplotlib
+
+For example, colors.py is a module that holds all functions related to colors, using rgb, and specific formulas in each one. This file has a function called blend_overlay which adds an overlay to any object by changing the rgb of the data holding object (the object is not specified thus the code is kept general and reusable). This function can be called on any object by sending its this ptr (self in python), rgb and intensity.
+
+    def blend_overlay(self, rgb, intensity):
+        """
+        Combine an RGB image with an intensity map using "overlay" blending.
+        Parameters
+        ----------
+        rgb : ndarray
+            An MxNx3 RGB array of floats ranging from 0 to 1 (color image).
+        intensity : ndarray
+            An MxNx1 array of floats ranging from 0 to 1 (grayscale image).
+        Returns
+        -------
+        ndarray
+            An MxNx3 RGB array representing the combined images.
+        """
+        low = 2 * intensity * rgb
+        high = 1 - 2 * (1 - intensity) * (1 - rgb)
+        return np.where(rgb <= 0.5, low, high)
+
+
+
