@@ -1,0 +1,73 @@
+All of the components separately mentioned in documentation including tutorials, development guide, installations collectively make up the user guide. This section opens with a highly abstract index page with all that there is to know about Matplotlib. This abstract is further divided with major sections and minor subheadings related to all queries any user may have, ranging from installation, and first plots to explanations, examples, tutorials, FAQS, troubleshooting, 2D \ 3D Modelling, Licenses, Versioning and Release Notes. Thus the documentation is complete and extensive from every view point.
+
+Users guide
+General
+Getting started
+Installation quick-start
+Draw a first plot
+Where to go next
+
+Installation
+Installing an official release
+Third-party distributions
+Installing a nightly build
+Installing from source
+Installing for development
+
+Frequently asked questions
+
+Explanations
+Matplotlib Application Interfaces (APIs)
+Backends
+Interactive figures
+Fonts in Matplotlib
+Event handling and picking
+Performance
+Interactive figures and asynchronous programming
+
+How-to and troubleshooting
+How-to
+Troubleshooting
+Environment variables
+
+External resources
+Books, chapters and articles
+Videos
+
+Tutorials
+Tutorials and examples
+Plot types
+Tutorials
+Examples
+
+Reference
+
+API Reference
+Usage patterns
+Modules
+Contributing
+Contributing
+Bug triaging and issue curation
+Setting up Matplotlib for development
+Testing
+Writing documentation
+Documentation style guide
+Working with Matplotlib source code
+Pull request guidelines
+Release guide
+Dependencies
+Minimum version of dependencies policy
+Matplotlib Enhancement Proposals
+Project information
+Matplotlib Mission Statement
+History
+Citing Matplotlib
+
+License
+Credits
+
+Release notes
+Version 3.6
+Version 3.5
+Version 3.4
+Past versions
