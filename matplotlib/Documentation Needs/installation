@@ -1,0 +1,52 @@
+Matplotlib clearly states the requirements for successful installation of it's official releases. Following are some of the many cases discussed in the documentation regarding different platforms and builds. Each one requires the user to have a proper internet connection, Python and pip downloaded along with basic knowlege of the platform one is using.  Apart from that, the documentation itself is so clear the user does not need anything else. 
+
+The steps are well tested and also offer short side notes to cater to common issues that users may potentially face, and hold an FAQ session too. This is one of the most important requirements because different software issues arise on runtime and may not be covered by the optimal steps of the documentation.
+
+
+-> Installing an official release
+Matplotlib releases are available as packages for macOS, Windows and Linux on PyPI.
+
+These can be installed using the following code:
+python -m pip install -U pip
+python -m pip install -U matplotlib
+
+For support of GUI frameworks, saving animations and other file formats, install Optional dependencies.
+
+-> Third-party distributions
+Various third-parties already provide Matplotlib for their environments.
+
+-> Python distributions
+Matplotlib is part of major Python distributions like:
+
+Anaconda
+ActiveState ActivePython
+WinPython
+
+-> Linux
+Ubuntu: sudo apt-get install python3-matplotlib
+
+-> Installing a nightly build
+Matplotlib makes nightly development build wheels available and these wheels can be installed with pip by:
+
+python -m pip install \
+  --upgrade \
+  --pre \
+  --index-url https://pypi.anaconda.org/scipy-wheels-nightly/simple \
+  --extra-index-url https://pypi.org/simple \
+  matplotlib
+  
+  
+-> Installing from source
+
+Install Dependencies: https://matplotlib.org/stable/devel/dependencies.html#dependencies
+A C compiler is required, xcode or Visual Studio.
+For VS make sure "Desktop development with C++" is selected, and that the latest MSVC, "C++ CMake tools for Windows," and a compatible Windows SDK is used.
+
+The following steps are carried out.
+
+git clone https://github.com/matplotlib/matplotlib.git
+cd matplotlib
+python -m pip install -e .
+python -m pip install .
+python -m pip install -r requirements/dev/dev-requirements.txt   // for tests
+git pull
