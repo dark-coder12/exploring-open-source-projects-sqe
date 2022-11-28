@@ -1,1 +1,6 @@
+The performance of NodeJS is explored as follows:
+  -> How the progressive web applications are implemented for better user experience.
+  -> For speedy availability of data to the users the content delivery network is implemented using express-cdn.
+  -> Service worker files for the background synchronization, push notifications to improve performance.
+  -> Usage of cache to store the data at local storage and retrieving data from cache.
 
