@@ -1,0 +1,22 @@
+React is open to contribution according to the contribution guidelines given in React Docs. All the react contribution is done on Github to maintain the code history and updates professionally.
+https://reactjs.org/docs/how-to-contribute.html
+
+All the changes are directly submitted to the main branch.
+React don’t use separate branches for development or for upcoming releases, as it prefers to keep main in good shape, with all tests passing.
+
+You can test the changes you made through different ways like :
+
+1. If you want to try your changes in your existing React project, you may copy following :
+build/node_modules/react/umd/react.development.js, build/node_modules/react-dom/umd/react-dom.development.js,
+cd ~/path_to_your_react_clone/
+yarn build react/index,react/jsx,react-dom/index,scheduler --type=NODE
+
+2. If your project uses React from npm, you may delete react and react-dom in its dependencies and use yarn link to point them to your local build folder. Note that instead of --type=UMD you’ll want to pass --type=NODE when building. You’ll also need to build the scheduler package:
+
+cd build/node_modules/react
+yarn link
+cd build/node_modules/react-dom
+yarn link
+
+cd ~/path/to/your/project
+yarn link react react-dom
