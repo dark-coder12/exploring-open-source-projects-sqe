@@ -1,0 +1,43 @@
+Matplotlib offers it's users to contribute to the library in various different ways as discussed in the open source contribution section.
+
+According to Matplotlib: 
+"Thank you for your interest in helping to improve Matplotlib! There are various ways to contribute to Matplotlib. All of them are super valuable but don't necessarily require writing code at all."
+
+-> contributing to the documentation
+-> opening new issues for bugs
+-> requesting new features
+-> asking for clarification on things you find unclear
+-> fixing bugs
+
+It also further states to use gitter or discourse for development related issues.
+
+Matplotlib, being one of the most widely used libraries requires highly standardized documentation in every aspect, especially for the developers. Concise and unambigious steps will further aid the developers to effectively contributes with as less errors as possible, and Matplotlib aces this phase, by offering huge documentation and step by step code. Not only this, but licenses are enhancement proposals allow for more rigourous implementation of set rules.
+
+Developers are given the options for: 
+
+Contributing
+Bug triaging and issue curation
+Setting up Matplotlib for development
+Testing
+Writing documentation
+Documentation style guide
+Working with Matplotlib source code
+Pull request guidelines
+Release guide
+Dependencies
+Minimum version of dependencies policy
+Matplotlib Enhancement Proposals
+Licenses
+
+
+-> Matplotlib just uses BSD compatible code. If one uses code from another project make sure it has a PSF, BSD, MIT or any other compatible license. GPL and LGPL code are not acceptable in the main code base. If you include code, make sure a copy of that code's license is added in the license directory if the code's license requires you to distribute the license with it. Non-BSD compatible licenses are acceptable in Matplotlib toolkits,  but make sure the licenses are clearly stated.
+
+-> Matplotlib Enhancement Proposals are design documents for large changes to Matplotilb. These documents should provide a discussion of both why and how the changes should be made. This is done by opening a pull request. An MEP must contain atleast the following: 
+
+Status
+Branches and Pull requests
+Abstract
+Detailed description
+Implementation
+Backward compatibility
+Alternatives
