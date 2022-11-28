@@ -1,0 +1,5 @@
+One good thing about React is that it doesn't force you to use a predefined architectural pattern like other JavaScript frameworks do. 
+
+That is to say, React allows you to determine the structure of your application by yourself.
+
+It provides architectural freedom to the user to use the components according to the requirements.
