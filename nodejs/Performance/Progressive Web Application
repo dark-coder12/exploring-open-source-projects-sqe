@@ -1,0 +1,75 @@
+							Progressive Web Application
+							
+A progressive web app (PWA) is a website that looks and behaves as if it is a mobile app.
+
+							PWA in nodejs
+To give users the experiecne of mobile application nodejs provides the implementation of PWA in following method:
+
+1) For establishment of the base of project we merely need:
+	-> Node.js to run the server 
+	-> Express to run the HTTP server
+	-> Create a self-signed certificate using OpenSSL
+	-> Chrome to test the website and debug your PWA
+
+2) Creating a basic HTTP Server
+
+	: server.js
+			`const express = require('express')
+			const path = require('path')
+
+			const httpPort = 80
+
+			const app = express()
+
+			app.use(express.static(path.join(__dirname, 'public')))
+
+			app.get('/', function(req, res) {
+			  res.sendFile(path.join(__dirname, 'public/index.html'))
+			})
+
+			app.listen(httpPort, function () {
+			  console.log(`Listening on port ${httpPort}!`)
+			})
+			`
+	: index.html
+			`<html>
+			  <body>
+			    <span>This example is for the article of progressive web apps written for LogRocket</span>
+			    <br>
+			    <span>You are now</span> <span><b class="page-status">online</b></span>
+			    <script src="/js/pwa.js"></script>
+			  </body>
+			</html>
+			`
+	: pwa.js
+			`document.addEventListener('DOMContentLoaded', init, false);
+			function init() {
+			  console.log('empty for now')
+			}`
+	To see this initial setup we need to run our localhost to access our site.
+
+3) Adding a manifest file
+The empty landing screen and the installability requirement will both be addressed by adding a Node.JS manifest. A straightforward file called the web app manifest tells the browser information concerning your web app. It describes how it ought to operate when installed on the user’s desktop or mobile device. The web app manifest is necessary in order for the Add to Home Button timely to appear.
+
+Having established Node.JS and what a web manifest is, let’s build a new document called a manifest node. Js must have that name in the root directory. Add the code block below after that. It’s basically just a file with a few required and configurable attributes. name: The name will appear on the screen when the site loads the splash screen. On the main screen, it will be the description that appears beneath your app button. This is really necessary to build a PWA.
+	: pwawebmanifest.js
+		`{
+		  "name": "Progressive Web App example",
+		  "short_name": "pwa-tutorial",
+		  "description": "Progressive Web App example to be used in conjuction with the article in LogRocket",
+		  "icons": [
+		    {
+		      "src": "/../images/splash-screen.png",
+		      "sizes": "512x512",
+		      "type": "image/png"
+		    }
+		  ],
+		  "start_url": "/",
+		  "display": "fullscreen",
+		  "theme_color": "#764ABC",
+		  "background_color": "#764ABC"
+		}`
+
+4) Optimization
+Further steps can be taken for the betterment of PWA such as layout and content and so on.
+							
