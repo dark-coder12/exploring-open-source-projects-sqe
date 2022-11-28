@@ -1,0 +1,65 @@
+                                                                Service Worker
+                                                                
+A service worker is a piece of JavaScript code that handles the cache for assets and data you choose to save for future requests.
+
+A service worker has some rules you must follow to make it work:
+
+- It only works with valid HTTPS or http://localhost
+- It only grabs requests within its scope
+- It only has access to the files on its folder or “below”
+
+Since the service worker may view and execute the response, Node.JS PWAs only function on HTTPS.The service person can maintain the cache to provide offline functionality, receive and manage network requests, and send push alerts toyour customers. Service workers provide far more granular control, making them adaptable, and appropriate for a wide range of use cases. Since service workers run on a separate thread, they do not block your main JavaScript application code.
+
+                                                                Offline Experience
+                                                                
+Service workers can be used to craft offline experiences for web applications. They are exceptional in this regard because they give you low-level granular control over intercepting and manipulating requests and caching resources.
+
+                                                                Push Notifications
+
+Services workers also come with push notification functionality. They the special ability to provide notifications even while the user is not on the associated web page or website.
+
+                                                                Background Synchronization
+
+Because service workers aim at improved offline experiences, they also come with a background sync API. This feature allows web content to be synchronized without interrupting the user’s experience. For instance, form data can be held for background syncing if the user submits a form while on an unstable connection. The service worker can then sync the form data with the server in the background and only do so once the connection has stabilized.
+
+                                                                Serviceworker.js
+              `const CACHE = 'cat-image-cache'
+
+              // Add content to the cache when the service worker is installed.
+              self.addEventListener('install', (event) => {
+                  event.waitUntil(caches.open(CACHE).then((cache) => {
+                      cache.addAll(['./img']);
+                  }));
+              });
+
+              // Intercept fetch requests.
+              self.addEventListener('fetch', (event) => {
+                  // First, satisfy the request with cached content.
+                  event.respondWith(fetchFromCache(event.request));
+
+                  // Then, update the cache.
+                  event.waitUntil(updateCache(event.request));
+              });
+
+              // Fetches the requested content from the cache.
+              function fetchFromCache(request) {
+                  return caches.match(request).then((matching) => {
+                      if (matching) {
+                          return matching;
+                      }
+
+                      return fetch(request);
+                  });
+              }
+
+              // Updates the cache from the server.
+              function updateCache(request) {
+                  return caches.open(CACHE).then((cache) => {
+                      return fetch(request).then((response) => {
+                          return cache.put(request, response.clone()).then(() => {
+                              return response;
+                          });
+                      });
+                  });
+              }`
+                                                                
