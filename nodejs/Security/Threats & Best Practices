@@ -1,0 +1,38 @@
+This file contains the possible threats to Nodejs and its possible solution to avoid that threat.
+
+Denial of Service of HTTP server (CWE-400):
+
+This is an attack where the application becomes unavailable for the purpose it was designed due to the way it processes incoming HTTP requests. These requests need not be deliberately crafted by a malicious actor: a misconfigured or buggy client can also send a pattern of requests to the server that result in a denial of service.
+
+Mitigation:
+-> Use a reverse proxy to receive and forward requests to the Node.js application. Reverse proxies can provide caching, load balancing, IP blacklisting, etc. which          reduce the probability of a DoS attack being effective.
+-> Correctly configure the server timeouts, so that connections that are idle or where requests are arriving too slowly can be dropped. See the different timeouts in        http.Server, particularly headersTimeout, requestTimeout, timeout, and keepAliveTimeout.
+-> Limit the number of open sockets per host and in total. See the http docs, particularly agent.maxSockets, agent.maxTotalSockets, agent.maxFreeSockets and                server.maxRequestsPerSocket.
+
+
+Exposure of Sensitive Information to an Unauthorized Actor (CWE-552):
+
+All the files and folders included in the current directory are pushed to the npm registry during the package publication. There are some mechanism to control this behavior by defining a blocklist with .npmignore and .gitignore or by defining an allowlist in the package.json
+
+Mitigation: 
+
+-> Using npm publish --dry-run list all the files to publish. Ensure to review the content before publishing the package.
+-> It’s also important to create and maintain ignore files such as .gitignore and .npmignore. Throughout these files, you can specify which files/folders should not be      published. The files property in package.json allows the inverse operation -- allowed list.
+-> In case of an exposure, make sure to unpublish the package.
+
+Information Exposure through Timing Attacks (CWE-208):
+
+This is an attack that allows the attacker to learn potentially sensitive information by, for example, measuring how long it takes for the application to respond to a request. This attack is not specific to Node.js and can target almost all runtimes.
+
+Mitigation:
+-> The crypto API exposes a function timingSafeEqual to compare actual and expected sensitive values using a constant-time algorithm.
+-> For password comparison, you can use the scrypt available also on the native crypto module.
+-> More generally, avoid using secrets in variable-time operations. This includes branching on secrets and, when the attacker could be co-located on the same              infrastructure (e.g., same cloud machine), using a secret as an index into memory. Writing constant-time code in JavaScript is hard (partly because of the JIT). For    crypto applications, use the built-in crypto APIs or WebAssembly (for algorithms not implemented in natively).
+
+Memory Access Violation (CWE-284):
+
+Memory-based or heap-based attacks depends on a combination of memory management errors and an exploitable memory allocator. Like all runtimes, Node.js is vulnerable to these attacks if your projects runs on a shared machine. Using a secure heap is useful for preventing sensitive information from leaking due to pointer overruns and underruns.
+
+Mitigation:
+-> Use --secure-heap=n depending on your application where n is the allocated maximum byte size.
+-> Do not run your production app in a shared machine.
