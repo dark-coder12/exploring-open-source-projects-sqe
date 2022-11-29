@@ -1,0 +1,45 @@
+Cache is basically a hardware or software component that stores data so that future requests for that data can be served faster.
+
+Matplotlib also holds cache unique for each user that helps faster resolving of requests as per the user's previous data. Caching is a brilliant way to increase data retrieval performance by reducing the need to access the underlying slower storage layer.
+
+An example of a first time request in Matplotlib:
+
+/usr/local/lib/python2.7/dist-packages/matplotlib/font_manager.py:273: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
+  warnings.warn('Matplotlib is building the font cache using fc-list. This may take a moment.')
+  
+This clearly shows that a first time request is made and will now be saved in the cache. Next time if the user makes this request, it will be highly accessible and fast.
+
+Each user has a Matplotlib cache directory.
+
+On Unix systems, this is separate from the configuration directory.
+
+Locating the cache directory:
+To locate this matplotlib cache directory, a command has to be used.
+
+Command: matplotlib.get_cachedir():
+
+The following command sequence is generally used to access cache:
+
+import matplotlib as mpl
+mpl.get_cachedir()
+'/home/darren/.cache/matplotlib'
+
+
+On Windows, both the configuration directory and the cache directory are the same and are in either the Documents folder or the Users directory.
+
+The configuration directory is found through: 
+
+import matplotlib as mpl
+mpl.get_configdir()
+'/home/darren/.config/matplotlib'
+
+Note: Darren is just a placeholder for the user's name.
+
+import matplotlib as mpl
+mpl.get_configdir()
+'C:\\Documents and Settings\\jdhunter\\.matplotlib'
+mpl.get_cachedir()
+'C:\\Documents and Settings\\jdhunter\\.matplotlib'
+
+Changing the directory:
+MPLCONFIGDIR sets the location of both configuration and cache directory.
