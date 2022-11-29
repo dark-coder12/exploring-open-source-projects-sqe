@@ -1,0 +1,72 @@
+Progressive Web Apps
+
+PWA's are one of the most beneficial technologies nowadays. They give the feel of a native app while using web technologies and being hosted on the web.
+PWAs are built with features like push notifications and offline mode. They are also built on and enhanced with modern APIs, service workers, with higher reliability and the ability to install them on any device.
+
+PWAs provide a number of advantages to users — including being installable, progressively enhanced, responsively designed, re-engageable, linkable, discoverable, network independent, and secure.
+
+Matplotlib being a library is not directly related to PWA's. However, Python is a language that can be easily integrated into PWAs and thus it is easy to use matplotlib for data visualization on a web app as well.
+
+Django or Flask are two frameworks Python offers, that help in the transformation to a PWA.
+
+
+Django:
+
+-> To create a progressive web app with Django, Django PWA package needs to be installed. 
+pip install django-pwa
+
+
+-> Add pwa to installed apps in Django settings
+# <proj>/settings.py
+
+INSTALLED_APPS = [
+    # other installed apps
+    'pwa',
+]
+
+
+-> Set static files directory
+
+# <proj>/settings.py
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    # or any other location of your choice
+]
+
+-> Set the URL for progressive components in urls.py
+# <proj>/urls.py
+from django.urls import path, include
+urlpatterns = [
+    # other path settings
+    path('', include('pwa.urls')),
+]
+
+-> Load meta tags for progressive web app in the base template
+
+{% load pwa %}
+
+<head>
+  <!-- Other head elements -->
+  {% progressive_web_app_meta %}
+</head>
+
+
+-> Optional Overriding of Options:
+
+PWA_APP_DIR = 'ltr'
+PWA_APP_LANG = 'en-US'
+
+After this is done a django progressive app is officially made, and matplotlib can easily be integrated into it.
+
+For example:
+
+Django code:
+<div style="width:1000;height:100">
+{{ graph_div|safe }}
+</div>
+
+Matplotlib:
+graph_div = plotly.offline.plot(fig, auto_open = False, output_type="div")
+
+This graph is now passed to the div. 
