@@ -43,3 +43,12 @@ mpl.get_cachedir()
 
 Changing the directory:
 MPLCONFIGDIR sets the location of both configuration and cache directory.
+
+
+Incase of errors mentioned on stackoverflow, an easy way to resolve it is to clear the cache so that it's built again next time:
+
+dir_cache = get_cachedir()
+for file in glob(os.path.join(dir_cache, '*.cache')) + glob(os.path.join(dir_cache, 'font*')):
+    if not os.path.isdir(file): 
+        os.remove(file)
+        print(f'Deleted font cache {file}.')
