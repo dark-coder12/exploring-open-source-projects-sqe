@@ -1,0 +1,4 @@
+React is known for the architectural freedom it provides and is coded in components which can be reused for other purposes.
+
+render props refers to a simple technology that uses a props valued as a function to share code between a kind of React components.
+This function Return a React element and call it instead of implementing its own rendering logic.
