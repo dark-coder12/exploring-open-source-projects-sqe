@@ -1,0 +1,36 @@
+After detecting the issues, there are several set of steps which contributor have to go though in order to make contribution first by setting up the project for himself. When all of the steps are completed then a pull request can be proposed for changes.
+
+-> Setting up your local environment
+  Step 1: Fork
+  Step 2: Branch
+  
+-> The process of making changes
+  Step 3: Code
+  Step 4: Commit
+  
+-> Commit message guidelines
+  Step 5: Rebase
+  Step 6: Test
+  Step 7: Push
+  Step 8: Opening the pull request
+  Step 9: Discuss and update
+  
+-> Approval and request changes workflow
+  Step 10: Landing
+  
+-> Reviewing pull requests
+  Review a bit at a time
+  Be aware of the person behind the code
+  Respect the minimum wait time for comments
+  Abandoned or stalled pull requests
+  Approving a change
+  Accept that there are different opinions about what belongs in Node.js
+  Performance is not everything
+  Continuous integration testing
+  
+-> Notes
+  Commit squashing
+  Getting approvals for your pull request
+  Waiting until the pull request gets landed
+  Check out the collaborator guide
+  Appendix: subsystems

@@ -1,0 +1,6 @@
+Making contribution to a project means that the contributor is actually part of that project who is going to work with other contributors (workers). Nodejs makes sure that every contributor gets an equal chance and comfortable environment for working on the project. So there are several guidelines for contributors which they have to abide by:
+
+-> Code of conduct : Set of guidelines for all the contributors.
+-> Issues : The proper process and method of creating issue under Nodejs.
+-> Pull Requests : The proper set of guidelines for making pull requests in case of any proposed change in current version
+-> Developers' Certificate of Origin 1.1 : A certification for the contributor.
