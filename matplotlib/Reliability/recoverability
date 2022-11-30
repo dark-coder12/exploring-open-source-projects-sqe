@@ -1,0 +1,30 @@
+Recoverability refers to a software's reaction to failures, and whether it works as intended after an unexpected situation.
+
+Matplotlib has discussed a few pointers with regards to what steps a user can take during errors in code trunking or commiting (during open source contribution) and also discussed them in it's documentation.
+
+-> Erronous trunk rebases can be stopped by
+git rebase --abort
+
+-> Reset branch back to the saved point
+git reset --hard tmp
+
+-> Incase a backup wasn't made
+git reflog show cool-feature
+
+-> Resetting before failure
+git reset --hard cool-feature@{2}
+
+-> Correcting a wrong commit message
+git branch tmp HEAD
+# interactive rebase
+git rebase -i 6ad92e5
+
+this opens a text editor with the previous message, and you can then correct it.
+
+
+In terms of coding within the language:
+
+import matplotlib as mpl
+mpl.rcParams.update(mpl.rcParamsDefault)
+
+such a code snippet restores defaults after a wrong procedure.
