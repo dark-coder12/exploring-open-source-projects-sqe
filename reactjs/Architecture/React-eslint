@@ -1,0 +1,9 @@
+Linter used by React is ESLint. 
+
+Linintng your code is a good practice as it helps you spot any would be bugs. 
+React, being an open source project, is prone to bugs especially while integrating thus linters help in it.
+
+It’s tells you :
+-if you’ve imported something and not used it 
+-if your function could be short-handed
+-loads of other little gotchas that you can fully configure.
