@@ -1,0 +1,54 @@
+Matplotlib being a library is not directly concerned with Serverless Code, however, Python is one of the most supportive languages for serverless deployment and Matplotlib code may be included in it.
+
+Serverless refers to the fact that clients are not responsible for managing and paying for the servers, not that applications operate without servers. A Serverless Platform has much lower operating costs than a conventional system.
+
+
+-> All of the architecture relating to the servers' backend is handled by the cloud partner.
+-> Serverless architecture has lower operational costs than traditional architecture. 
+-> Serverless architecture is highly fault-tolerant.
+-> The storage and processing capacity of serverless architecture are theoretically limitless and have a dynamic structure. It requires a small amount of code to implement and is easily scalable.
+
+
+Example Scenario to build a serverless python function:
+
+-> Building a Function for HTTP Requests
+Create a file httprequest.py with the code: npm install -g serverless
+
+
+-> Using CLI, make a project: mkdir ~/Hevo-serverless-Example
+
+cd ~/Hevo-serverless-Example
+sls create -n Hevo-serverless-Example -t aws-python3
+
+The name of the directory created is Hevo-serverless-Example. The aws-python3 module is used to aid in creating the serverless function.
+
+-> Moving in the directory: cat serverless.yml
+
+-> Function Definition:
+
+import requests
+
+def handler(event, context):
+    r = requests.get("https://news.ycombinator.com/news")
+    return {"content": r.text}
+    
+    
+-> Updating serverless.yml
+
+functions:
+  hello:
+    handler: hello.handler
+  httprequest:
+    handler: httprequest.handler
+ 
+-> Deployment
+
+sls deploy
+sls invoke -f httprequest
+
+
+-> The deployment will take some time because the following tasks must be completed:
+
+A new Cloud Formation Template would be created using the Serverless.yml file as a base.
+Cloud Formation Template and hello.py would be compressed.
+It would transfer the compressed files to an Amazon S3 bucket.
