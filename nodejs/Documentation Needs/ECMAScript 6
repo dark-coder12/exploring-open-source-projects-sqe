@@ -1,0 +1,20 @@
+								ECMAScript 6
+								
+Node.js is built against modern versions of V8. By keeping up-to-date with the latest releases of this engine, we ensure new features from the JavaScript ECMA-262 specification are brought to Node.js developers in a timely manner, as well as continued performance and stability improvements.
+
+All ECMAScript 2015 (ES6) features are split into three groups for:
+	1) Shipping
+	2) Staged
+	3) In progress features
+
+								Shipping
+								
+All shipping features, which V8 considers stable, are turned on by default on Node.js and do NOT require any kind of runtime flag.
+
+								Staged
+								
+Staged features, which are almost-completed features that are not considered stable by the V8 team.
+
+								In Progress Features
+								
+In progress features can be activated individually by their respective harmony flag, although this is highly discouraged unless for testing purposes. These flags are exposed by V8 and will potentially change without any deprecation notice
