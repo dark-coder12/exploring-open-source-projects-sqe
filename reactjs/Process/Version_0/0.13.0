@@ -1,0 +1,6 @@
+0.13.0	10 March 2015
+1.Deprecated patterns that warned in 0.12 no longer work, ref resolution order has changed, 
+
+2.Removed properties this._pendingState and this._rootNodeID, 
+
+3.Support ES6 classes, Added API React.findDOMNode(component), Support for iterators and immutable-js sequences, Added new features React.addons.createFragment, deprecated React.addons.classSet.

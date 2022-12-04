@@ -1,0 +1,7 @@
+React assists you in developing a component-based software architecture that simplifies maintenance and code reuse.
+
+It enables you to maintain a global state variable by utilizing state management libraries such as Redux
+. 
+Because React architecture allows you to build out components, code expansion becomes much easier as your project grows.
+
+Since it is component-based, the React architecture makes unit testing much easier. 

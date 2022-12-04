@@ -1,0 +1,6 @@
+0.11.0	17 July 2014	
+1.Improved SVG support 
+
+2. Normalized e.view event, Update $apply command
+
+3.Added support for namespaces, Added new transformWithDetails API, includes pre-built packages under dist/, MyComponent() now returns a descriptor, not an instance.

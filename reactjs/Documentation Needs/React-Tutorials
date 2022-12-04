@@ -1,0 +1,14 @@
+React provides a proper tutorial of tic tac toe game for the user to learn the basis quickly and further explore the library with a clearer concept.
+
+For user ease, it is divided into several sections:
+
+1.Setup for the Tutorial will give you a starting point to follow the tutorial.
+
+2.Overview will teach you the fundamentals of React: components, props, and state.
+
+3.Completing the Game will teach you the most common techniques in React development.
+
+4.Adding Time Travel will give you a deeper insight into the unique strengths of React.
+
+Good thing is you don’t have to complete all of the sections at once to get the value out of this tutorial.
+

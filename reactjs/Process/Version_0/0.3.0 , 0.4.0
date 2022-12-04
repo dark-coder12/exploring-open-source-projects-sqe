@@ -1,0 +1,16 @@
+The initial release was done only for facebook to help streamline Facebook’s UI and make the app easier to manage as it grew.
+Later it was released for the public as an open source coding library.
+
+Since then a number of releases have come which fixed the bugs and introduced new features in each release.
+
+0.3.0	29 May 2013:	
+Initial Public Release
+
+0.4.0	20 July 2013:	
+1.Functionality to comment nodes was added
+example : <div> {/*code between this is commented*/} </div>, 
+
+2.Improved server-side rendering APIs and the form 
+
+3.React.autoBind was removed 
+https://github.com/microsoft/fluentui/issues/9717
