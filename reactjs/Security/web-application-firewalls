@@ -1,0 +1,13 @@
+A WAF is a software filter used in React that monitors, analyzes, and filters incoming traffic in order to discover and prevent harmful material.
+
+There are three techniques to establish a web application firewall:
+
+1.Hardware-level network-based firewall protection.
+
+2.The integrated host-based firewall within the program.
+
+3.Cloud-based WAF
+
+WAF’s signature-based filtration is highly efficient against SQL injection, XSS, execution of unauthorized code, and zip slip.
+
+Implementing a Web Application Firewall is one of the finest React security best practices.
