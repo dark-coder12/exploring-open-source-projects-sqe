@@ -1,0 +1,12 @@
+React lazy loading is beneficial in a number of ways:
+
+1.Faster initial loading: React lazy loading helps reduce the page weight, allowing for a faster initial page load time.
+
+2.Better User Experience: React lazy loading improves a user’s experience on an application. Good UX helps increase sales in business and also retain customers.
+
+3.Less bandwidth consumption: React lazy loading images help save data and bandwidth. This is particularly useful for users who do not have fast internet or large data plans.
+
+4.Preserving system resources: Lazy loading React components helps conserve server and client resources by requesting just a fraction of components.
+
+5.Reduced work for the browser: When React lazy loads images, browsers do not need to process images until they are requested when users scroll to that part of the page.
+Bundling
