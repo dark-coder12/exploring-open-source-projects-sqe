@@ -1,0 +1,11 @@
+React supports Amazon Web Services that helps in maintaining data using cloud computing.
+
+to deploy a react app using AWS :
+
+run npx sls deploy
+
+What happens when you do it:
+1.Your server-side JavaScript/TypeScript code is transpiled, bundled, and then deployed as a new AWS Lambda function that performs the server-side rendering of your site.
+2.Your client-side JavaScript/TypeScript code is also transpiled, but this time for running in reasonably modern web browsers. Then it is copied together with all other static files like images and fonts to S3 and served to your users from there.
+
+All this happens automatically
