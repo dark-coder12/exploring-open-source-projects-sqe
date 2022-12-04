@@ -1,0 +1,15 @@
+Reliability Requirements
+
+5.1.  The system shall use HTTP/3 protocol that supports QUIC to accelerate reliable delivery of traffic. 
+         5.1.1   The system shall have less than 1% rate of failure occurrence when 6500 concurrent users, during peak hours.
+         
+5.2.  The system shall have 0.01% chances of failure when a service request for downloading up to 250  Megabytes animation is sent.
+        5.2.1.  The system shall have 0.05% failure rate when a service request for downloading 250 - 300 Megabytes animation is sent.
+        
+5.3.  The system shall have 99.9% uptime Availability with one hour downtime per year in worse scenarios.
+     5.3.1. The system shall use AWS Load Balancing to prevent downtime and evenly distribute workload on servers.
+     5.3.2. The system shall use AWS High Availability with S3 storage tier to reduce downtime.
+     5.3.3. The system shall use AWS Elastic Disaster Recovery to prevent data loss.
+     
+5.4.  The system shall be compatible with AWS.
+    5.4.1. The system shall use AWS Load Scaling services to store the word bank and animation component.
