@@ -1,0 +1,8 @@
+React adopts a microservice approach for its front end.
+
+the application divided into multiple “projects”. 
+-In backend development, a microservice is usually an independent and deployable unit. 
+-For web or mobile applications microservice (npm package) for each entity in the application can also be made. Every piece of logic concerning this entity will be placed in this microservice. 
+1.They have their own state.
+2.Communicate with other parts only through interfaces e.g. create an index.js file to expose only certain components to the outside.
+3.Have defined and strict contracts. You need a component/ function, define the properties and the returning object. 
