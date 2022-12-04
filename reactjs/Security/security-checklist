@@ -1,0 +1,19 @@
+React has security checklist which should be following to prevent security issue
+
+1.Disable all markup-containing instructions
+
+2.With Jscrambler, keep react js secure.
+
+3.Implementing idle timeout is crucial.
+
+4.Utilize snippet technologies, like ES7 React, Redux, and others.
+
+5.Perform Reactjs code reviews, using whitelists to restrict all app inputs.
+
+6.Utilize detection software, a web application firewall, and serialized javascript NPM packages to strengthen app security.
+
+7.Analyze your code for react app security vulnerabilities and possibly dangerous code, like URLs and HTML elements.
+
+8.Employ Adequate authentication methods.
+
+9.Examine the dataset for SQL injection flaws and validates every API function against the API Schema.
