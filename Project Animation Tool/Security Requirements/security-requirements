@@ -1,0 +1,21 @@
+6.3   Security Requirements
+
+    	  6.3.1     The system shall use Denuvo V6 or newer anti-temper protection.
+      	
+        6.3.2   	The system shall store encrypted logs to prevent log injection attacks.
+      	
+        6.3.3   	The system shall store the authentication information in an encrypted format.
+        
+      	6.3.4   	The system shall use 2-factor authentication.    
+            6.3.4.1	The system shall be compatible with Google Authenticator.
+            
+      	6.3.5   	The system shall prevent multi-IP access to an account.
+        
+      	6.3.6   	The system shall only allow 8 characters or longer passwords.
+            6.3.6.1	The system shall only allow passwords containing special characters and numbers along with English alphabets.
+            6.3.6.2	The system shall allow a one-time code for regular users to get access.
+            6.3.6.3	The system shall allow fingerprint ID access to users on Android and iOS as an alternative to username/password combination.
+       
+       6.3.7   	The system shall allow the user to recover their username and password.
+            6.3.7.1	The system shall offer a “forgot username/password” option to the client if they get the login credentials incorrect.
+                6.3.7.1.1   The system shall send a recovery code to the secondary mail or mobile number and allow the user to reset their password if they enter the     recovery code correctly.
