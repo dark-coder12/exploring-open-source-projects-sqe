@@ -1,0 +1,22 @@
+Software Quality Engineering brought immense opportunities to utilize different technologies to ensure the software we develop is actually on par with standards accepted
+word wide, and with our own requirements. The project had four phases and required us to make a team of three (i.e. Izza Mujeeb, Bisma Ashar, Shehryar Munir). 
+
+The first phase being; choosing an open-source software to extract user story requirements and then write Behavior Driven tests for. We opted for GitLab and wrote
+scenario outlines for BDD using Gherkin Language, ensuring testing each control flow for the features we tested, such as Milestones, Projects, and Code Snippets. User
+stories, and Test Cases were documented on Notion, while task distribution was maintained on ClickUp with proper labelling, and regular updates were posted on Slack. 
+
+The second phase involved end-to-end testing, API testing, and documentation on our chosen project “GitHub”. End-to-end testing was done using Cucumber and Nightwatch
+JS. Previous test scenarios were written in Feature files, with their implementation being in the Step Definition folder, and front-end links present in the Page Object
+folder (to maintain dynamic behaviour). 
+
+Each feature was tested separately using a combination of these three folders and config files. API Testing was done using
+Codecept JS, the knowledge of get, put, post, patch and delete requests, paired with assertions to accurately determine test results. We used README.md to document
+GitHub’s REST and GraphQL API working, and UI components i.e. GitHub’s own components / Primer CSS.
+
+The third phase was focused on choosing three open-source codes i.e. Matplotlib, React JS, and Node JS, and their nonfunctional requirements such as Modularity,
+Reliability, Documentation, Performance, etc. For instance, upon researching Matplotlib’s code, its “Examples” directory proved to show high modularity.
+
+We proposed a “Story Animation Tool” in the last phase, and wrote specific non-functional requirements to show our semester’s learning outcomes in it.  For example “BS
+7925-1 shall be implemented in the final test reports, to include proper vocabulary for testing terms.”.
+
+Both phase three and four were documented on GitHub’s repositories.
