@@ -1,0 +1,27 @@
+                                                                Content Delivery Network
+                                                                
+A Content Delivery Network (CDN) is a distributed series of proxy servers deployed across multiple data centers over the internet. The objective of a CDN is to provide high availability and performance to end-users by using techniques such as web caching, load balancing, and request routing.
+
+                                                                Usage of CDN in Nodejs
+                                                                
+One of the framework of Nodejs named as `expressjs` supports the usage of content delivery network in nodejs. Express-CDN is Node.js module for delivering optimized, minified, mangled, gzipped, and CDN-hosted assets in Express (currently by Amazon S3 and Amazon CloudFront).
+
+                                                                Featurs of Express-CDN
+                                                                
+1) Automatic parsing of background, background-image and content for url({{absoluteUrl}}) in stylesheets and scripts.
+2) Built-in optimization of images in production mode using binaries from NPM of OptiPNG and JPEGTran.
+3) Supports Sass, LESS, and Stylus using respective stylesheet compilers.
+4) JavaScript assets are mangled and minified using UglifyJS.
+5) Automatic detection of asset changes and will only upload changed assets to S3 in production mode.
+6) Utilizes cachebusting, which is inspired by express-cachebuster and h5bp.
+7) All assets are compressed using zlib into a gzip buffer for S3 uploading with Content-Encoding header set to gzip.
+8) Embed multiple assets as a single <script> or <link> tag using the built-in dynamic view helper.
+9) Loads and processes assets per view (allowing you to minimize client HTTP requests).
+10) Combine commonly used assets together using a simple array argument.
+11) Uploads changed assets automatically and asynchronously to Amazon S3 (only in production mode) using knox.
+
+                                                                Working of Express-CDN
+                                                                
+When the server is first started, the module returns a view helper depending on the server environment (production or development). It also recursively searches through your viewsDir for any views containing instances of the CDN. After parsing each instance and removing duplicates, it will use your S3 credentials to upload a new copy of the production-quality assets. 
+
+                                                                

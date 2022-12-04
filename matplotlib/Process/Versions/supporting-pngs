@@ -1,0 +1,8 @@
+The following PNGS are attached to show that Matplotlib has
+
+1) Separate branches to maintain each version.
+2) Pre Release Beta Testing is also offered
+3) Releases overall do not follow a detailed structure on GitHub (no particular improvement from 1'st to Last Version's Upload). However, the documentation is highly professional and extensive.
+4) Tags are properly given to identify separate versions.
+5) Ticks example is given to show how an added feature is documented in a release.
+

@@ -1,0 +1,69 @@
+Matplotlib offers a variety of ways for various communities to add into their software.
+
+_________________________________________________________________________________________
+
+
+Before contributing:
+
+Connect to existing contributors:
+One can approach active contributors of this library as the first step before contributing. This essentially allows one to understand the dynamics before diving in.
+
+Join the contributor incubator:
+Matplotlib has a private channel for new contributers which is mainly handled by experienced developers. They appreciate questions regarding any technical difficulties, including but not limited to
+How to use git
+How to use github
+How PR reviews work
+Ambiguites about the code
+
+A meeting for the new contributors:
+A monthly meeting for new contributors is held, that targets a wide audience from maintainers to contributors. This meeting is hosted at the Scientific Python Website, and includes previous meeting minutes too.
+
+_________________________________________________________________________________________
+
+Contributing Code:
+Matplotlib's official website suggests forking the main repository of GitHub and then after adding in relevant code, submitting a Pull Request.
+
+This is the repo to be cloned: git clone https://github.com/<YOUR GITHUB USERNAME>/matplotlib.git
+A new branch to hold changes : git checkout -b my-feature origin/main
+After editing                : git add lib/matplotlib/collections.py  git commit
+To record changes            : git push -u origin my-feature
+
+Suggestions / Rules As Per Matplotlib Regarding Pull Requests are as follows: 
+
+If your pull request addresses an issue, use the title to describe the issue and mention the issue number in the PR description.
+
+All public methods should have informative docstrings. Use the numpy docstring standard.
+
+Formatting should follow the recommendations of PEP8, as enforced by flake8. 
+A tip to find this: 
+
+python -m pip install flake8
+flake8 /path/to/module.py
+
+Each high-level plotting function should have a simple example in the Example section of the docstring.
+
+Changes (both new features and bugfixes) should have good test coverage.
+
+Import the following modules using the standard scipy conventions:
+
+import numpy as np
+import numpy.ma as ma
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import matplotlib.cbook as cbook
+import matplotlib.patches as mpatches
+
+If your change is a major new feature, add an entry to the What's new section by adding a new file in doc/users/next_whats_new.
+
+If you change the API in a backward-incompatible way, please document it in doc/api/next_api_changes/behavior.
+
+_________________________________________________________________________________________
+
+Contributing to Documentation:
+
+Demand for documentation is as popular as code, and contributors are encouraged to participate in the following: 
+
+Fix a typo
+Clarify a docstring
+Write or update an example plot
+Write or update a comprehensive tutorial

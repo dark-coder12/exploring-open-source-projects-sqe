@@ -1,0 +1,31 @@
+
+Local Copy of the Code : git clone https://github.com/matplotlib/matplotlib.git
+
+Updating the code : Do retreive the latest code after regular intervals using:
+
+cd matplotlib
+git pull
+
+The tree in matplotlib will now have the latest changes.
+
+Steps to contribute code:
+
+Create an account on GitHub.
+Fork the project repository: click on the 'Fork' button near the top of the page, to create a separate copy for yourelf.
+
+Clone this to your device:
+git clone https://github.com/<YOUR GITHUB USERNAME>/matplotlib.git
+
+Enter the directory and install the local version of Matplotlib.
+
+Create a branch to hold your changes:
+git checkout -b my-feature origin/main
+and start making changes. Never work in the main branch!
+
+Work on this copy on your device, and after you're done:
+
+git add lib/matplotlib/collections.py
+git commit (Assuming collections.py was edited)
+
+to record your changes in Git, then push them to GitHub with:
+git push -u origin my-feature

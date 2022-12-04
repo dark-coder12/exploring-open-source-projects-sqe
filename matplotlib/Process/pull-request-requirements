@@ -1,0 +1,34 @@
+Special points while making pull requests: 
+
+1) Target the main branch.
+2) Adhere to the Coding guidelines.
+3) Update the documentation if needed.
+4) You may open incomplete or work-in-progress PRs if you need feedback from the developers.
+5) When updating your PR, instead of adding new commits to fix something, amendment can be done as well:
+6) git commit --amend --no-edit
+7) git push [your-remote-repo] [your-branch] --force-with-lease
+
+Upon researching the documentation, guidelines for each section were found: 
+
+
+-> Documentation
+Document each new feature. Incase of a new module, an rst file should be added.
+All plotting functions should be explained with an example (within the Example Section).
+
+-> Labels
+If you have the rights to set labels, tag the request with descriptive labels. 
+
+-> Milestones
+Bugfixes, tests for released code, and docstring changes are milestoned for the next patch release v3.N.M.
+
+-> Merging
+  Documentation and examples may be merged by the first reviewer. Matplotlib recommends the "is this better than it was?" as the review criteria.
+  For code changes at least two core developers with commit rights should review all pull requests. 
+  Ensure that all API changes are documented in a file in one of the subdirectories of doc/api/next_api_changes, and significant new features have an entry in doc/user/whats_new.
+  If a PR already has a positive review, a core developer may "champion" the request for merging. This requires notifying all core devs and label the PR with "Merge with Single Review?". Other core devs can then either accept or reject it, or request that it gets a second review. If no one asks for a 2nd review (in a week), it is then merged.
+
+-> Automated tests
+Whenever a pull request is created or updated, various automated test tools will run for the code.
+
+-> Linting
+Linting is required before merging. If Linting fails, you have a code style issue.

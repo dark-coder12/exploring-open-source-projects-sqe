@@ -1,0 +1,28 @@
+Python's standard library  includes built-in support for lazy imports.
+
+This is achieved via importlib.util.LazyLoader. 
+
+There are also third-party packages such as demandimport. These provide a “lazy module object” which delays its own import until first attribute access.
+
+As far as Matplotlib is concerned, Python packages like this one have also made extensive use of lazy imports.
+
+For instance,
+import matplotlib.pyplot as plt
+import numpy as np
+
+t = np.arange(0.0, 2.0, 0.01)
+s = 1 + np.sin(2*np.pi*t)
+plt.plot(t, s)
+
+plt.xlabel('time (s)')
+plt.ylabel('voltage (mV)')
+plt.title('About as simple as it gets, folks')
+plt.grid(True)
+plt.savefig("test.png")
+plt.show()
+
+Users can access matplotlibs module called pyplot using plt. now without requiring all the many submodules to be imported in one go.
+
+Here all of Matplotlib's modules are not accessed, only pyplot is thus lazy loading / importing is achieved.
+
+plt is imported lazily and now any of the sub features that the user needs, like setting xlabels, ylabels, saving and showing the figure will be called only when needed.

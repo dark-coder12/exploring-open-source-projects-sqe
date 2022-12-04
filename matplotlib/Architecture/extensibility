@@ -1,0 +1,101 @@
+Matplotlib's source code is an excellent example of extensibility, as the existing code does not need to be modified, to add contributions to the code, and extensions can thus easily be made.
+
+For instance, Matplotlib has a folder named examples, and it's documentation states that contributers are free to add in their customized examples in the same folder, without needing to worry about the rest of the examples or code.
+
+The folder for examples further holds folders for specific features and users can add in examples related to a particular feature there.
+
+Some folders within the examples directory:
+
+animation
+axes_grid1
+axisartist
+color
+misc
+mplot3d
+pie_and_polar_charts
+pyplots
+scales
+shapes_and_collections
+showcase
+specialty_plots
+spines
+statistics
+style_sheets
+subplots_axes_and_figures
+text_labels_and_annotations
+ticks
+user_interfaces
+widgets
+
+An example in the scatter folder, named polar_scatter is as follows:
+Note: It does not need to couple itself with other files extensively and just focuses on its own logic.
+
+"""
+==========================
+Scatter plot on polar axis
+==========================
+Size increases radially in this example and color increases with angle
+(just to verify the symbols are being scattered correctly).
+"""
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+# Fixing random state for reproducibility
+np.random.seed(19680801)
+
+# Compute areas and colors
+N = 150
+r = 2 * np.random.rand(N)
+theta = 2 * np.pi * np.random.rand(N)
+area = 200 * r**2
+colors = theta
+
+fig = plt.figure()
+ax = fig.add_subplot(projection='polar')
+c = ax.scatter(theta, r, c=colors, s=area, cmap='hsv', alpha=0.75)
+
+###############################################################################
+# Scatter plot on polar axis, with offset origin
+# ----------------------------------------------
+#
+# The main difference with the previous plot is the configuration of the origin
+# radius, producing an annulus. Additionally, the theta zero location is set to
+# rotate the plot.
+
+fig = plt.figure()
+ax = fig.add_subplot(projection='polar')
+c = ax.scatter(theta, r, c=colors, s=area, cmap='hsv', alpha=0.75)
+
+ax.set_rorigin(-2.5)
+ax.set_theta_zero_location('W', offset=10)
+
+###############################################################################
+# Scatter plot on polar axis confined to a sector
+# -----------------------------------------------
+#
+# The main difference with the previous plots is the configuration of the
+# theta start and end limits, producing a sector instead of a full circle.
+
+fig = plt.figure()
+ax = fig.add_subplot(projection='polar')
+c = ax.scatter(theta, r, c=colors, s=area, cmap='hsv', alpha=0.75)
+
+ax.set_thetamin(45)
+ax.set_thetamax(135)
+
+plt.show()
+
+#############################################################################
+#
+# .. admonition:: References
+#
+#    The use of the following functions, methods, classes and modules is shown
+#    in this example:
+#
+#    - `matplotlib.axes.Axes.scatter` / `matplotlib.pyplot.scatter`
+#    - `matplotlib.projections.polar`
+#    - `matplotlib.projections.polar.PolarAxes.set_rorigin`
+#    - `matplotlib.projections.polar.PolarAxes.set_theta_zero_location`
+#    - `matplotlib.projections.polar.PolarAxes.set_thetamin`
+#    - `matplotlib.projections.polar.PolarAxes.set_thetamax`

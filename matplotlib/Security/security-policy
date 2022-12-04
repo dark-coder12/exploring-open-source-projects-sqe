@@ -1,0 +1,16 @@
+Matplotlib's open source code includes a SECURITY.md file that is a short document featuring a link to report vulnerabilities as well as a table that depicts what versions are currently without any kind of vulnerabilities and are safe to use.
+
+
+Version	Supported
+3.6.x	✅
+3.5.x	✅
+3.4.x	❌
+3.3.x	❌
+< 3.3	❌
+
+Reporting a Vulnerability
+Security Vulnerability Reporting: https://tidelift.com/docs/security. Tidelift will coordinate the fix and disclosure.
+
+Upon using an external software, the total vulnerabilities currently were 0.
+
+The documentation also supports a separate documentation page for the latest stable version. Branches also exist for separate versions and any security issues may be catered there.

@@ -1,0 +1,58 @@
+To horizontally scale web-based services, a load balancer is a networking component that distributes network traffic across several servers.
+
+An HTTP proxy server that manages HTTP requests on behalf of other servers is known as an HTTP load balancer.
+
+Load Balancing in Python is achieved as follows. The explanation for the code is basically creating a load balance and a test file. loadbalancer is a built in python library that can be imported and initiated. The test class creates a pytest to test the connection and check whether the hello route is successfully made or not.
+
+$ mkdir http-load-balancer
+$ cd http-load-balancer
+$ python3.9 -m venv env
+$ source env/bin/activate
+
+(env)$ python -V
+Python 3.9.0
+
+(env)$ pip install flask pytest
+
+-> A new file test_loadbalancer.py:
+
+import pytest
+
+from loadbalancer import loadbalancer
+
+
+@pytest.fixture
+def client():
+    with loadbalancer.test_client() as client:
+        yield client
+
+
+def test_hello(client):
+    result = client.get('/')
+    assert b'hello' in result.data
+    
+    
+-> A new file called loadbalancer.py: 
+
+from flask import Flask
+
+loadbalancer = Flask(__name__)
+
+@loadbalancer.route('/')
+def router():
+    return 'hello'
+    
+  
+Output:
+
+(env)$ python -m pytest
+
+==================================================== test session starts =====================================================
+platform darwin -- Python 3.9.0, pytest-6.1.2, py-1.9.0, pluggy-0.13.1
+rootdir: /Users/michael/repos/testdriven/http-load-balancer
+collected 1 item
+
+test_loadbalancer.py .                                                                                                 [100%]
+
+===================================================== 1 passed in 0.10s ======================================================
+

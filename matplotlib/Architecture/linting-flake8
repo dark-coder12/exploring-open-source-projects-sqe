@@ -1,0 +1,73 @@
+Lints are majorly used for automated checking of your source code for programmatic and stylistic errors. 
+
+Upon reviewing the source code of Matplotlib, a separate section for Lints was found. eslints were majorly used along with a new technology known as flake8. 
+
+flake8 is a python tool that glues together pycodestyle, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.
+
+A code snippet found in the open source code is attached below. This action executes ESLint linter on specified javascript files without any previous action/build step or Docker required, and runs the steps specified. 
+
+name: Linting
+on: [pull_request]
+
+jobs:
+  flake8:
+    name: flake8
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python 3
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      - name: Install flake8
+        run: pip3 install -r requirements/testing/flake8.txt
+
+      - name: Set up reviewdog
+        run: |
+          mkdir -p "$HOME/bin"
+          curl -sfL \
+            https://github.com/reviewdog/reviewdog/raw/master/install.sh | \
+              sh -s -- -b "$HOME/bin"
+          echo "$HOME/bin" >> $GITHUB_PATH
+      - name: Run flake8
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -o pipefail
+          flake8 --docstring-convention=all | \
+            reviewdog -f=pep8 -name=flake8 \
+              -tee -reporter=github-check -filter-mode nofilter
+  eslint:
+    name: eslint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: eslint
+        uses: reviewdog/action-eslint@v1
+        with:
+          filter_mode: nofilter
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-check  
+          workdir: 'lib/matplotlib/backends/web_backend/'
+          
+          
+The checkout function includes:
+
+Run actions/checkout@v3
+Syncing repository: matplotlib/matplotlib
+Getting Git version info
+Temporarily overriding HOME='/home/runner/work/_temp/5a750352-6958-4e4b-858a-72466be92b25' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+/usr/bin/git config --global --add safe.directory /home/runner/work/matplotlib/matplotlib
+Deleting the contents of '/home/runner/work/matplotlib/matplotlib'
+Initializing the repository
+Disabling automatic garbage collection
+Setting up auth
+Fetching the repository
+Determining the checkout info
+Checking out the ref
+/usr/bin/git log -1 --format='%H'
+'626cf54906321406033a884b094891b339c586b4'

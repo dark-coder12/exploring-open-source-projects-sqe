@@ -1,0 +1,34 @@
+A CDN is a group of geographically distributed and interconnected servers. They provide cached internet content from a network location closest to a user to speed up its delivery.
+
+This improves web performance by reducing the time needed to send content / media to the users.
+
+Matplotlib being a library is not directly related to CDN's, however, the language it is built in, is. Python has a cdnupload command that that uploads your site’s static files to the Content Delivery Network's origin server. Matplotlib's figures can easily be uploaded through CDN.
+
+It generates a JSON “key mapping” that maps file paths to destination keys. A destination key is a file path with a hash in it based on the file’s contents. This allows us to set up the CDN to cache our static files.
+
+Installation:
+
+$ pip install cdnupload
+
+$ cdnupload /website/static s3://static-bucket --key-map=statics.json
+uploading script.js to script_8f3283c6342816f7.js
+uploading style.css to style_abcdef0123456789.css
+writing key map JSON to statics.json
+
+To integrate in Python: 
+
+import json, settings
+
+def init_server():
+    with open('statics.json') as f:
+        settings.statics = json.load(f)
+
+def static_url(path):
+    return '//mycdn.com/' + settings.statics[path]
+
+If Amazon S3 is to be used as a destination, boto3 should be used.
+pip install boto3
+
+Commands to upload a specific path:
+
+/path/to/my/python -m cdnupload

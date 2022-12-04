@@ -1,0 +1,13 @@
+                                                                Examples of non-vulneratibities
+                                                                
+Malicious Third-Party Modules (CWE-1357)
+Code is trusted by Node.js, therefore any scenario that requires a malicious third-party module cannot result in a vulnerability in Node.js.
+
+Prototype Pollution Attacks (CWE-1321)
+Node.js trusts the inputs provided to it by application code. It is up to the application to sanitize appropriately, therefore any scenario that requires control over user input is not considered a vulnerability.
+
+Uncontrolled Search Path Element (CWE-427)
+Node.js trusts the file system in the environment accessible to it. Therefore, it is not a vulnerability if it accesses/loads files from any path that is accessible to it.
+
+External Control of System or Configuration Setting (CWE-15)
+If Node.js automatically loads a configuration file which is documented no scenario that requires modification of that configuration file is considered a vulnerability.

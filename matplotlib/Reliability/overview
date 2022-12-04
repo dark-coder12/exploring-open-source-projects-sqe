@@ -1,0 +1,3 @@
+This directory focuses on various reliability measures both in the context of Matplotlib and Python.
+
+Instead of just examining Matplotlin's code, ways of implementing such non functional requirements are documented too.
