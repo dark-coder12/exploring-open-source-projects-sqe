@@ -8,3 +8,15 @@ stories, and Test Cases were documented on Notion, while task distribution was m
 The second phase involved end-to-end testing, API testing, and documentation on our chosen project “GitHub”. End-to-end testing was done using Cucumber and Nightwatch
 JS. Previous test scenarios were written in Feature files, with their implementation being in the Step Definition folder, and front-end links present in the Page Object
 folder (to maintain dynamic behaviour). 
+
+Each feature was tested separately using a combination of these three folders and config files. API Testing was done using
+Codecept JS, the knowledge of get, put, post, patch and delete requests, paired with assertions to accurately determine test results. We used README.md to document
+GitHub’s REST and GraphQL API working, and UI components i.e. GitHub’s own components / Primer CSS.
+
+The third phase was focused on choosing three open-source codes i.e. Matplotlib, React JS, and Node JS, and their nonfunctional requirements such as Modularity,
+Reliability, Documentation, Performance, etc. For instance, upon researching Matplotlib’s code, its “Examples” directory proved to show high modularity.
+
+We proposed a “Story Animation Tool” in the last phase, and wrote specific non-functional requirements to show our semester’s learning outcomes in it.  For example “BS
+7925-1 shall be implemented in the final test reports, to include proper vocabulary for testing terms.”.
+
+Both phase three and four were documented on GitHub’s repositories.
