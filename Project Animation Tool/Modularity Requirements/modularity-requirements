@@ -1,0 +1,19 @@
+ 2.1. The code shall follow the Single Responsibility principle and make separate classes for each task.
+      2.1.1.   The code shall have separate classes for each shape.
+      2.1.2.   The code shall have separate error handling classes for all error categories.
+      2.1.3.   The code shall have a component based approach and cater all features separately.
+      
+ 2.2. The code shall be maintained in separate folders for additional ios and android requirements.
+ 
+ 2.3.  The system shall adopt microservices architecture to support different desktop browsers as well mobile application users.  
+        2.3.1. The system shall use saga pattern to aid transactions when a user wants to buy a premium membership for audio feature.
+        
+ 2.4.  The code shall have CSSLint and Flake8 configuration for error detection.
+        
+ 2.5.  The code shall be separately maintained for each increment.
+        
+ 2.6.  The code shall fulfill the modularity standards of ISO/IEC 25010.
+        
+ 2.7.  The code shall follow MVC architectural pattern for user interface and divide program logic into three interconnected elements.
+
+
