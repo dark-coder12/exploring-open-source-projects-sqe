@@ -1,0 +1,19 @@
+4.1. The system shall have a new version release if a major bug occurs.
+      4.1.1. The system shall receive the bug report according to the React Native Bug Reporting standards.
+
+4.2. The system shall have a new version release if a new feature is released.
+     4.2.1. The system shall have separate folders for each version. 
+     4.2.2. The system shall have documentation guidelines for each version.
+
+4.3 The system shall allow contributions in separate branches committed in the main branch once the yarn test is passed 99.9%.
+    4.3.1. The system shall document the history of every contribution in the documentation branch.
+    4.3.2. The system shall ask for the Contributor Agreement License before accepting pull requests in the main branch.
+
+4.4 The system shall follow React Native standards for allowing contribution.
+    4.4.1 The system shall enable yarn run lint to detect contribution errors.
+
+4.5 The code shall be reviewed before the deployment.
+    4.5.1. The code shall have a primary audit and functionalities should 99.9% fulfill the requirements.
+    4.5.2. The code shall have automatic analysis and all testing requirements should be 99.9% fulfilled.
+    4.5.3. The code shall have an in-depth analysis and the bugs, performance issues and security vulnerabilities should be 99.9% catered according to the respective requirements.
+
