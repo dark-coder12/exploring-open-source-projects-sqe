@@ -1,0 +1,23 @@
+Using the example below, a React project has a source (src) folder where all the essential files and folders are listed: 
+
+└── /src 
+
+  ├── /assets      : contains all of the project's static files, such as your logo, fonts, images, and favicons. 
+
+  ├── /components  : contains a bit collection of UI codes such as buttons, forms, avatars.
+
+  ├── /views       : contains all your React application's web pages. 
+
+  ├── /services    : contains code that allows you to interact with external API resources. 
+
+  ├── /utils       : contains reusable function snippets for performing quick tasks like text truncation or down casing.
+
+  ├── /hooks       : contains codes and logic that can be reused across multiple components. 
+
+  ├── /store       : houses your state management files, such as Redux, which are used to make certain functions and variables available throughout your application. 
+
+  └── App.js       : connects all components and views. 
+
+  ├── index.js     : It is responsible for bootstrapping the React library and mounting it on the root element. 
+
+  ├── index.css    : main and global CSS file for our application. Any writing style to this file will apply throughout the project.  

@@ -1,0 +1,2 @@
+0.14.1	29 October 2015
+Added support for srcLang, default, kind attributes, and color attribute, Ensured legacy .props access on DOM nodes, Fixed scryRenderedDOMComponentsWithClass, Added react-do

@@ -1,0 +1,12 @@
+New features were added in these back to back releases 
+
+0.8.0	20 December 2013:
+1.Upgraded browserify which is an open-source JavaScript bundler tool that allows developers to write
+
+2.Added some new features like support for rows & cols, defer & async, loop for <audio> & <video>, autoCorrect attributes. Added onContextMenu events, Upgraded jstransform and esprima-fb tools
+
+0.9.0	20 February 2014:
+3.Added support for crossOrigin, download and hrefLang, mediaGroup and muted, sandbox, seamless, and srcDoc, scope attributes, Added any, arrayOf, component, oneOfType, renderable, shape to React.PropTypes, Added support for onMouseOver and onMouseOut event, Added support for onLoad and onError on <img> elements.
+
+0.10.0	21 March 2014:
+4.Added support for srcSet and textAnchor attributes, add update function for immutable data, Ensure all void elements don't insert a closing tag.

@@ -1,0 +1,42 @@
+16.8.0	6 February 2019
+This was one of the major release of React as it introduced "Hooks" that let you use state and other React features without writing a class. This was a major attraction for all the developers.
+
+Example : in this code 'useState' hook is used
+
+import React, { useState } from 'react';
+
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+
+2.It also added ReactTestRenderer.act() and ReactTestUtils.act() for batching updates
+
+Example :
+TestRenderer.act() prepares a component for assertions. Using it for create
+
+let root; 
+act(() => {
+  root = create(<App value={1}/>)
+});
+
+// make assertions on root 
+expect(root.toJSON()).toMatchSnapshot();
+
+TestUtils.act() Tmakes your test run closer to how React works in the browser
+
+  // Test first render and componentDidMount
+  act(() => {
+    ReactDOM.createRoot(container).render(<Counter />);
+  });
+
+3.Improve useReducer Hook lazy initialization API.

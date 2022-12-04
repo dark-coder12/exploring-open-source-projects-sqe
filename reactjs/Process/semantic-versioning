@@ -1,0 +1,11 @@
+React follows semantic versioning. 
+
+- Patch versions are released for critical bugfixes : when you make backwards compatible bug fixes
+- Minor versions for new features or non-essential changes : when you add functionality in a backwards compatible manner
+- Major versions for any breaking changes : when you make incompatible API change
+
+For a breaking changes :
+Introduce deprecation warnings in a minor version so that users learn about the upcoming changes and migrate their code in advance.
+
+React has issued a versioning policy to in depth explain about each type of version and how it is catered.
+https://reactjs.org/docs/faq-versioning.html

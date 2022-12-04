@@ -1,0 +1,5 @@
+React has files for cached data where the code is stores so that future requests for that data can be served faster.
+
+https://github.com/facebook/react/tree/main/packages/react-cache
+A basic cache for React applications. It also serves as a reference for more advanced caching implementations.
+This package is meant to be used alongside yet-to-be-released, experimental React features. It's unlikely to be useful in any other context..
