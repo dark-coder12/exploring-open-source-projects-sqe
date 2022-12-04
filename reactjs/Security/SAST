@@ -1,0 +1,11 @@
+SAST support JavaScript through the use of "ESLint Security Plugin."
+
+ESlint React plugin is required for the set up
+
+Add eslint-plugin-react to our eslint analyzer and restrict it to the following rules:
+
+react/no-unescaped-entities
+react/no-unsafe
+react/jsx-no-target-blank
+react/no-danger-with-children
+react/no-danger
