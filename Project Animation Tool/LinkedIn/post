@@ -1,0 +1,10 @@
+Software Quality Engineering brought immense opportunities to utilize different technologies to ensure the software we develop is actually on par with standards accepted
+word wide, and with our own requirements. The project had four phases and required us to make a team of three (i.e. Izza Mujeeb, Bisma Ashar, Shehryar Munir). 
+
+The first phase being; choosing an open-source software to extract user story requirements and then write Behavior Driven tests for. We opted for GitLab and wrote
+scenario outlines for BDD using Gherkin Language, ensuring testing each control flow for the features we tested, such as Milestones, Projects, and Code Snippets. User
+stories, and Test Cases were documented on Notion, while task distribution was maintained on ClickUp with proper labelling, and regular updates were posted on Slack. 
+
+The second phase involved end-to-end testing, API testing, and documentation on our chosen project “GitHub”. End-to-end testing was done using Cucumber and Nightwatch
+JS. Previous test scenarios were written in Feature files, with their implementation being in the Step Definition folder, and front-end links present in the Page Object
+folder (to maintain dynamic behaviour). 
