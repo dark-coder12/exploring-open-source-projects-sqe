@@ -1,0 +1,41 @@
+
+7.	Testing and Test Automation Requirements
+  7.1.	Each module of the system shall be passed or failed in accordance with the business requirements provided in the Software Requirements Specification Document,    and thus this section requires prior requirements to be quantifiable.
+  7.2.	The system’s testing modules shall follow ISO standards.
+    7.2.1.	IEEE 1008 shall be implemented for Unit Testing.
+    7.2.2.	IEEE 1044 shall be implemented for Bug Reporting.
+    7.2.3.	BS 7925-1 shall be implemented in the final test reports, to include proper vocabulary for testing terms.
+    7.2.4.	BS 7925-2 shall be implemented for Component Testing.
+  7.3.	The system shall be tested for at least 3 iterations using unit, end to end and exploratory testing, and the results shall be documented.
+    7.3.1.	The system shall provide support for JEST, a testing solution mainly meant for React, and this shall be used for detailed testing of the system.
+      7.3.1.1.	Unit Testing for the system shall be done through using the npm install –save-dev react-test-renderer command.
+      7.3.1.2.	Animations of the system shall be tested using assertions in the code for the <AnimatedComponent> part of React’s code. JEST’s jest.advanceTimersByTime       and similar commands shall help achieve this.
+      7.3.1.3.	Audio for the system shall be tested using react-native-audio-processing-test.
+   7.3.2.	 For end to end testing, Playwright tests shall be written.
+      7.3.2.1.	The system’s end to end tests shall be written in test fixtures.
+      7.3.2.2.	Page isolation between tests shall be achieved.
+      7.3.2.3.	Playwright’s trace file using “npx playwright show-report” shall be generated to observe the flow of a complete feature.
+    7.3.3.	For pages containing hyperlinks, the system shall add snapshots within /snapshot folder.
+    7.3.4.	 The system’s tests shall include a pair of beforeEach and afterEach blocks so that the effects of the test are isolated.
+    7.3.5.	 Instead of making API commands for any tests, mock commands shall be tested.
+      7.3.5.1.	Jest.mock and similar functions shall be used for this purpose.
+  7.4.	The system shall also provide support for Behavior Driven Testing.
+    7.4.1.	 Gherkin Language shall be used to write potential story scenarios.
+      7.4.1.1.	Instead of single scenarios, scenario outlines shall be preferred where ever possible.
+    7.4.2.	 The system’s BDD tests shall be written in Cucumber by converting the statements in the feature files.
+    7.4.3.	 The system’s BDD test scenarios shall cover each boundary case obtained from equivalent class partition and boundary testing techniques.
+    7.4.4.	Implementation of the cucumber tests shall be done using Nightwatch.js, due to its easy integration with ReactJS.
+  7.5.	The system shall keep a 100 % record of the bugs it encounters.
+    7.5.1.	 LogRocket, a React Native Monitoring Solution shall be used to reproduce issues and bugs instantly, to aid in the logging of the bugs.
+    7.5.2.	 The system’s testing shall include a traceability matrix for the bugs.
+  7.6.	Each module of the system shall have a parallel file in the /test folder of the source code.
+    7.6.1.	 Each distinct function of each module of the system shall have a corresponding test function in the testing file.
+  7.7.	The coverage for each module of the system shall be represented in the /out folder of the source code.
+  7.8.	One module shall have a minimum acceptable coverage of approximately 98%. 
+  7.9.	The coverage of the whole software shall be identified using both the default test coverage of the IDE, InstanbulJS, and Cobertura, an external coverage         reporter.
+    7.9.1.	The coverage from Cobertura shall be done using Coberatura’s Jenkins Plugin.
+    7.9.2.	The plugin for the system shall be installed using npm commands.
+    7.9.3.	InstanbulJS is JEST’s official code coverage reporter and will also be used to compare all results.
+    7.9.4.	There shall be no more of a .5 % difference in each of the coverage reports.
+  7.10.	Load Testing of the system shall be done using the platform Loader, and the story conversion requests shall be tested to achieve a maximum upper limit, which     shall be at least 6500.
+  7.11.	After attaining 98.5% of passed tests, the testing of the system shall stop, and the next iteration shall begin.
