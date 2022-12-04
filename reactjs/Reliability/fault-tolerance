@@ -1,0 +1,12 @@
+Achieving 100% error free code is still no achivable, there is always a 0.1% posiibility for an error.
+
+to achieve fault-tolerance React uses error boundaries. Currently the API is only available in class components and it looks something like:
+
+componentDidCatch(error) {
+  // When this gets called, you know an error has occurred!
+  // Hurray for fault detection!
+
+  // We can now do things like call setState to render a fallback
+  // UI so that our users know an error has occurred.
+  this.setState({ error, showFallback: true });
+}
