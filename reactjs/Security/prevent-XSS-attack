@@ -1,0 +1,11 @@
+React has catered different security comprimising scenarios 
+
+For example to prevent XSS attack use JSX data binding syntax ({}) to place data in your elements. 
+
+Do this:
+
+<div>{data}</div>
+
+Don’t do this:
+
+<form action={data}>...

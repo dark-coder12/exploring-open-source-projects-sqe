@@ -1,0 +1,22 @@
+React's versions 0.14 onwards support auto-scaling.
+
+To instal react auto scaling, use the following command :
+npm install --save react-auto-scale
+
+the usage :
+myContent will scale to fit inside .myContainer.
+
+import React, { Component } from 'react';
+import AutoScale from 'react-auto-scale';
+ 
+export default class MyComponent extends Component {
+  render() {
+    return (
+      <div className="myContainer">
+        <AutoScale>
+          <div className="myContent">Example</div>
+        </AutoScale>
+      </div>
+    );
+  }
+}
