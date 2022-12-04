@@ -1,0 +1,59 @@
+React has a thorough review process to ensure there are minimum errors in the code
+
+1.Are there any new npm packages added?
+
+2.Check if there are no functionality duplicates like date-fns + moment.
+
+3.Check for imports, you could bundle the whole library and use just a single method like below:
+import _ from 'lodash';
+//should became more precise import like:
+import uniq from 'lodash/uniq'; 
+
+4.If your app is using translations – check if all new areas have also translations. 
+  return (
+    <div>
+      New static text inside new component should be translated!
+    </div>
+  )
+}
+
+5.Check for missing or invalid types if you are using TypeScript. 
+const NewComponent = ({items, data}) => {
+  const getItemId = (data: any) => data.id
+  return (
+    <div>
+      {items.map(item => (
+        <span key={getItemId(item)}>
+          <h1>{item.title}</h1>
+          <p>{item.description}</p>
+        </span>
+      ))}
+    </div>
+  )
+}
+
+6.Check for variables, functions, and components names. They should all declare what they are and what they do.
+
+7.For boolean values it’s good to have a prefix is/are/should which declares their behaviour (visible => isVisible) and it will be harder to treat them as html properties.
+
+8.Functions should declare what they do, and if they return anything, they should have something like get – getUsers, if they are manipulating data, they should somehow tell what they are doing – updateUsers => addUniqId, parseData => parseToAPIFormat etc.
+
+9.Check for weird logic patterns
+
+10.Check for too complicated code chunks. If someone is adding an ID into an array using 20 lines of code instead of 1, take some actions.
+
+11.If you can’t understand what a specific chunk of code is doing – understand and add a description comment there.
+
+12.Check for hardcoded names, paths, values. Separate that kind of code, so you can easily change it in one place.
+
+13.Check for backwards compatibility issues like changes in props from optional to required. Or changes in some methods parameters types.
+
+14.Check for code repetition.Code should be reusable and if you will need to update that logic, you will have to update it in a single place. Not 3 of them.
+
+15.Check for missing form validations or incorrect form validations.
+
+16.Check for missing error handlers from API. If a user receive 500 errors from API, will the user see a message with correct info? Mostly about try/catch, and what is happening in a catch body?
+
+17.Check for async methods – can they be done in parallel, or we need all the data in a sequence?
+
+18.Sometimes you may notice potential bugs. Fix them to avoid making same mistake again.
